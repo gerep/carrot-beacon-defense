@@ -27,10 +27,8 @@ func area_exited(area: Area2D) -> void:
 
 func damage_enemies() -> void:
 	for enemy in current_enemies:
-		if not enemy:
-			continue
-
-		current_enemies[enemy].take_damage(self, damage_amount)
+		if current_enemies[enemy]:
+			current_enemies[enemy].take_damage(self, damage_amount)
 
 
 func remove_enemy_from_list(enemy_instance_id: int) -> void:

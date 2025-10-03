@@ -1,25 +1,32 @@
-[gd_scene load_steps=3 format=3 uid="uid://drphgeal7gd5o"]
+[gd_scene load_steps=4 format=3 uid="uid://drphgeal7gd5o"]
 
 [ext_resource type="PackedScene" uid="uid://buet7hfc6wrv1" path="res://enemy/enemy.tscn" id="1_0xm2m"]
 [ext_resource type="PackedScene" uid="uid://bjlhaap0hhd4e" path="res://carrot/carrot.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cfu1k6chjiiyy" path="res://soil/soil.tscn" id="3_h2yge"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Carrot" parent="." instance=ExtResource("2_h2yge")]
-position = Vector2(575, 448)
+position = Vector2(306, 240)
 damage_amount = 2
 
 [node name="Carrot2" parent="." instance=ExtResource("2_h2yge")]
-position = Vector2(414, 529)
+position = Vector2(263, 272)
 
 [node name="Enemy" parent="." instance=ExtResource("1_0xm2m")]
-position = Vector2(464, 251)
-speed = 0.5
+position = Vector2(257, 143)
+speed = 0.2
 
 [node name="Enemy3" parent="." instance=ExtResource("1_0xm2m")]
-position = Vector2(327, 95)
-speed = 0.5
+position = Vector2(280, 165)
+speed = 0.2
 
 [node name="Enemy2" parent="." instance=ExtResource("1_0xm2m")]
-position = Vector2(457, 13)
-speed = 0.5
+position = Vector2(295, 88)
+speed = 0.2
+
+[node name="Soil2" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(288.416, 197.253)
+
+[node name="Soil" parent="." instance=ExtResource("3_h2yge")]
+position = Vector2(254, 215)

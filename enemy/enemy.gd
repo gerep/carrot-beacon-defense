@@ -20,5 +20,5 @@ func take_damage(carrot: Carrot, amount: int) -> void:
 	health_amount -= amount
 	if health_amount <= 0:
 		carrot.remove_enemy_from_list(get_instance_id())
-		queue_free()
+		call_deferred(&"queue_free")
 		# give the player light essence

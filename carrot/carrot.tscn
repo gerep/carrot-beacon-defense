@@ -1,29 +1,27 @@
 [gd_scene load_steps=6 format=3 uid="uid://bjlhaap0hhd4e"]
 
-[ext_resource type="Texture2D" uid="uid://dy1ht1noyglc" path="res://icon.svg" id="1_4pkix"]
 [ext_resource type="Script" uid="uid://c3rqy2hqk52iu" path="res://carrot/carrot.gd" id="1_54u62"]
+[ext_resource type="Texture2D" uid="uid://bgvco0e508y1v" path="res://assets/carrot.png" id="2_54u62"]
 
 [sub_resource type="Gradient" id="Gradient_54u62"]
 colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
 
 [sub_resource type="GradientTexture2D" id="GradientTexture2D_wid3o"]
 gradient = SubResource("Gradient_54u62")
-width = 256
-height = 256
 fill = 1
 fill_from = Vector2(0.5, 0.5)
 fill_to = Vector2(1, 1)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_4pkix"]
-radius = 128.0
+custom_solver_bias = 1.0
+radius = 32.0
 
 [node name="Carrot" type="Node2D"]
 script = ExtResource("1_54u62")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 0, 1)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("1_4pkix")
+texture = ExtResource("2_54u62")
 
 [node name="PointLight2D" type="PointLight2D" parent="."]
 blend_mode = 2
